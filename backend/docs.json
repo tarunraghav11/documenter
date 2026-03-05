@@ -1,10 +1,12 @@
 [
   {
     "slug": "install",
-    "title": "Installation"
+    "title": "Installation",
+    "html": "<h1>Installation</h1>\n<p>Run:</p>\n<p>npm install</p>\n<p>Then start the project.</p>\n"
   },
   {
     "slug": "intro",
-    "title": "Introduction"
+    "title": "Introduction",
+    "html": "<h1>Introduction</h1>\n<p>Welcome to the documentation system.</p>\n<p>This page comes from an MDX file.</p>\n"
   }
 ]

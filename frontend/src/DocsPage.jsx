@@ -1,16 +1,25 @@
 import {useParams} from "react-router-dom"
+import docs from "../../backend/docs.json"
 
 export default function DocsPage(){
 
   const {slug} = useParams()
 
+  const doc = docs.find(d => d.slug === slug)
+
+  if(!doc){
+    return <h1>Doc not found</h1>
+  }
+
   return(
 
     <div>
 
-      <h1>{slug}</h1>
+      <h1>{doc.title}</h1>
 
-      <p>This is where compiled MDX content will appear.</p>
+      <div
+        dangerouslySetInnerHTML={{__html:doc.html}}
+      />
 
     </div>
 
